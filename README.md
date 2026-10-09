@@ -16,3 +16,12 @@ The player stops loading at the first missing frame. PNG transparency is preserv
 ## Build
 
 Open the project in IntelliJ IDEA with JDK 25 and run the Gradle `build` task. Odin is pinned to the latest release, 0.3.6 (release commit `833e053`), which targets Minecraft 26.2.
+
+## GitHub Releases
+
+The GitHub Actions workflow builds the addon on pushes to `main` and attaches `DisplayPort-{Version}.jar` to a GitHub Release when you push a version tag. Keep the tag version in sync with `mod_version` in `gradle.properties`. For example, with version `1.0.0`, create and push the tag with:
+
+```powershell
+git tag v1.0.0
+git push origin v1.0.0
+```
